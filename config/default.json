@@ -1,5 +1,6 @@
 {
     "port": 5000,
+    "JWTSecret": "secret key for JWT",
     "mongoURI": "mongodb+srv://root:root@cluster0-levzj.azure.mongodb.net/test?retryWrites=true&w=majority"
 
 }

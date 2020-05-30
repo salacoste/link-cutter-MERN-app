@@ -5,8 +5,6 @@ const schema = new Schema({
         type: String,
         required: true,
         unique: true,
-
-        
     },
     password: {
         type: String,
@@ -15,6 +13,10 @@ const schema = new Schema({
     name: {
         type: String,
         
+    },
+    isAdmin: {
+        type: Boolean,
+        required: true
     },
     links: [{
         type: Types.ObjectId,

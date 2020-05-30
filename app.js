@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 
 
 
+
 const app = express()
 
 // MIDDLEWARES
@@ -22,6 +23,7 @@ async function startDB () {
         await mongoose.connect(config.get('mongoURI'), {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            useCreateIndex: true
 
         })
         app.listen(PORT, ()=> {
