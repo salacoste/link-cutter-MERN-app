@@ -6,7 +6,7 @@ import { NavItem, NavLink } from "shards-react";
 const SidebarNavItem = ({item, beforeIcon, afterIcon}) => {
     return (
         <NavItem>
-            <NavLink tag={RouteNavLink} to={item.to}>
+            <NavLink tag={RouteNavLink} to={item.to} exact>
             {item.htmlBefore && (
                 <div
                 className="d-inline-block item-icon-wrapper"

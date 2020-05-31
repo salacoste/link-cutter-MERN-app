@@ -12,17 +12,17 @@ import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 const fakeData = [
     {
         title: 'Список заказов',
-        to: 'lolo/gg3/',
+        to: '/lolo/gg3/',
         htmlBefore: <i><ListIcon fontSize="small"/></i>
     },
     {
         title: 'Библиотека знаний',
-        to: 'lolo/33/',
+        to: '/1/33/',
         htmlBefore: <i><LocalLibraryIcon fontSize="small"/></i>
     },
     {
         title: 'Техническая документация',
-        to: 'lolo/a3/',
+        to: '/2/a3/',
     },
     {
         title: 'Калькулятор смешивания финишного слоя',
