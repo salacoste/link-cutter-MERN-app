@@ -7,8 +7,10 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
 
-import 'bootstrap/dist/css/bootstrap'
-import 'shards-ui/dist/css/shards.css'
+import 'bootstrap/dist/css/bootstrap.css'
+// import 'shards-ui/dist/css/shards.css'
+import './utils/stylesDashboard/shards-dashboard.css'
+
 
 import {BrowserRouter} from 'react-router-dom'
 

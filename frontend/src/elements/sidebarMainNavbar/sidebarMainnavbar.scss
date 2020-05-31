@@ -1,0 +1,32 @@
+.main-navbar {
+    nav {
+        justify-content: center;
+        span.logo {
+            justify-content: center;
+            line-height: 60px;
+            width: 100%;
+            font-size: 18px;
+            
+            @media screen and (max-width: 768px) {
+                padding-right:65px;
+
+            }
+        }
+
+        a {
+            color: #5478E9;
+
+            &:hover, &:focus {
+                text-decoration:none;
+                color: darken($color: #5478E9, $amount: 20)
+            }
+        }
+    }
+
+
+}
+
+.item-icon-wrapper {
+    line-height: 1rem;
+    vertical-align: top;
+}
