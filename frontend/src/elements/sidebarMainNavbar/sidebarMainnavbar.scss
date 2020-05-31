@@ -13,7 +13,7 @@
             }
         }
 
-        a {
+        a:not(.toggle-sidebar) {
             color: #5478E9;
 
             &:hover, &:focus {

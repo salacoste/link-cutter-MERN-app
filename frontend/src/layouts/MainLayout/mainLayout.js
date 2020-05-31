@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import {Col, Container, Row,} from 'shards-react'
 import MainSidebar from '@/elements/mainSidebar/mainSidebar.js'
+import MainNavbar from '@/elements/mainNavbar/mainNavbar'
 
 import './mainLayout.scss'
 
@@ -14,12 +15,13 @@ const Wrapper = styled.div`
 
 
 export const MainLayout = (props) => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <Wrapper>
       <Container fluid>
         <Row>
-          <MainSidebar/>
+          <MainSidebar isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
           <Col
             className="main-content p-0"
             lg={{ size: 9, offset: 3 }}
@@ -27,7 +29,7 @@ export const MainLayout = (props) => {
             sm="12"
             tag="main"
           >
-          {/* {!props.noNavbar && <MainNavbar />} */}
+          {!props.noNavbar && <MainNavbar isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />}
           { props.children }
           {/* {!props.noFooter && <MainFooter />} */}
 

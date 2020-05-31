@@ -7,12 +7,12 @@ import SidebarMainNavbar from '@/elements/sidebarMainNavbar/sidebarMainNavbar'
 import SidebarNavItems from '@/elements/sidebarNavItems/sidebarNavItems.js'
 
 
-const MainSidebar = () => {
+const MainSidebar = ({isSidebarOpen, setSidebarOpen}) => {
     const classes = classNames(
         "main-sidebar",
         "px-0",
         "col-12",
-        "open"
+        isSidebarOpen && "open"
       );
 
     return (
@@ -23,7 +23,7 @@ const MainSidebar = () => {
                 lg={{ size: 3 }}
                 md={{ size: 4 }}
             >
-             <SidebarMainNavbar/>
+             <SidebarMainNavbar isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
              <SidebarNavItems/>
             </Col>
         </Fragment>

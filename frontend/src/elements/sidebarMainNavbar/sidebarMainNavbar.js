@@ -4,7 +4,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import {Link} from 'react-router-dom'
 import './sidebarMainnavbar.scss'
 
-const SidebarMainNavbar = () => {
+const SidebarMainNavbar = ({isSidebarOpen, setSidebarOpen}) => {
 
     return (
         <Fragment>
@@ -20,7 +20,10 @@ const SidebarMainNavbar = () => {
                     </Link>
                     <a
                     className="toggle-sidebar d-sm-inline d-md-none d-lg-none"
-                    
+                    onClick={(e)=>{
+                        e.preventDefault()
+                        setSidebarOpen(!isSidebarOpen)
+                    }}
                     >
                     <ArrowBackIcon className="mb-3"/>
                     </a>
