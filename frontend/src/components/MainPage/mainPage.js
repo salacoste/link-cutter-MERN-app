@@ -2,13 +2,20 @@ import React, {Fragment} from 'react'
 import logo from '../../logo.svg'
 import {Counter} from '../../features/counter/Counter'
 
+import {Row, Col, Container} from 'shards-react'
 
 const MainPage = () => {
   return (
-    <Fragment>
-      <h1>Hello</h1>
-      <h2>World</h2>
-    </Fragment>
+    <Container fluid className="mt-2">
+      <Row>
+        <Col>
+          <h1>Hello</h1>
+          <h2>World</h2>
+        </Col>
+      
+      </Row>
+    </Container>
+    
   )
 }
 

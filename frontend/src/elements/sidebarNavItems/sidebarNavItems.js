@@ -7,9 +7,14 @@ import './styles.scss'
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 import ListIcon from '@material-ui/icons/List';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
-
+import DomainIcon from '@material-ui/icons/Domain';
 
 const fakeData = [
+    {
+        title: 'Главная страница',
+        to: '/',
+        htmlBefore: <i><DomainIcon fontSize="small"/></i>
+    },
     {
         title: 'Список заказов',
         to: '/lolo/gg3/',
