@@ -5,5 +5,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+
+        .MuiSvgIcon-fontSizeSmall {
+            vertical-align: top;
+            font-size: 1rem;
+        }
     }
 }

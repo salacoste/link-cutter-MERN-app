@@ -17,6 +17,9 @@ import {
 }  from "shards-react";
 
 import './mainNavbar.scss'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import ReceiptIcon from '@material-ui/icons/Receipt';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 
 const NavbarToggle = ({setSidebarOpen, isSidebarOpen}) => {
     return (
@@ -40,12 +43,34 @@ const NavbarNav = () => {
 
   return (
     <Nav navbar className="border-left flex-row">
-      <NavItem tag={Dropdown} caret toggle={()=>{
+      <NavItem tag={Dropdown} caret toggle={(e)=>{
+          console.log('co:', 'event')
           setOpen(!open)
-      }} className="userDropdown">
+      }} className="userDropdown pl-2">
+        <img
+            className="user-avatar rounded-circle mr-2"
+            src={require("@/app/images/avatars/0.jpg")}
+            alt="User Avatar"
+          />{" "}
         <DropdownToggle caret tag={NavLink} className="text-nowrap px-3 ">
-          <span className="d-none d-md-inline-block">Sierra Brooks</span>
+          <span className="d-none d-md-inline-block mr-2">Игорь</span>
         </DropdownToggle>
+        <Collapse tag={DropdownMenu} right small open={open}>
+          <DropdownItem tag={Link} to="user-profile">
+            <i className="material-icons">
+              <AssignmentIndIcon fontSize="small" />
+              </i> Профиль
+          </DropdownItem>
+          <DropdownItem tag={Link} to="edit-user-profile">
+            <i className="material-icons"><ReceiptIcon fontSize="small"/></i> 
+            Реквизиты
+          </DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem tag={Link} to="/" className="text-danger">
+            <i className="material-icons text-danger">
+              <ExitToAppIcon fontSize="small"/></i> Выйти
+          </DropdownItem>
+        </Collapse>
       </NavItem>
     </Nav>
   )
