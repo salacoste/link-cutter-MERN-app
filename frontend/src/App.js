@@ -9,7 +9,7 @@ import Router from './app/router/router'
 function App() {
   
   return (
-    <Router />
+    <Router isAuth={false} />
   )
 }
 

@@ -46,7 +46,7 @@ const NavbarNav = () => {
       <NavItem tag={Dropdown} caret toggle={(e)=>{
           console.log('co:', 'event')
           setOpen(!open)
-      }} className="userDropdown pl-2">
+      }} className="userDropdown pl-4">
         <img
             className="user-avatar rounded-circle mr-2"
             src={require("@/app/images/avatars/0.jpg")}
