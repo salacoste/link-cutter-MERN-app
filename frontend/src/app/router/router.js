@@ -7,7 +7,7 @@ import UserPage from '@components/UserPage/userPage'
 import AuthPage from '@components/AuthPage/authPage'
 // import RegistrationPage from '@components/RegistrationPage/registrationPage'
 
-
+import NonAuthLayout from '../../layouts/nonAuthLayout/nonAuthLayout'
 import notFound from '../../components/404/404'
 
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
@@ -29,7 +29,7 @@ export const Routes = ({isAuth}) => {
       <Switch>
         <AppRoute exact path='/' exact layout={MainLayout} component={MainPage} />
         <AppRoute exact path='/user' layout={MainLayout} component={UserPage} />
-        <AppRoute exact path='/auth' layout={MainLayout} component={AuthPage} />
+        {/* <AppRoute exact path='/auth' layout={MainLayout} component={AuthPage} /> */}
         {/* <AppRoute exact path='/registration' layout={MainLayout} component={AuthPage} /> */}
   
         <Redirect to="/" />
@@ -39,7 +39,9 @@ export const Routes = ({isAuth}) => {
   }
   return (
     <Switch>
-        <AppRoute exact path='/' exact layout={MainLayout} component={MainPage} />
+        <AppRoute exact path='/' exact 
+        layout={NonAuthLayout} 
+        component={AuthPage} />
         <Redirect to="/" />
     </Switch>
   )
